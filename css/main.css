@@ -4,13 +4,25 @@
 	font-weight: 700;
 	src: local('ClearSans'), url('../fonts/Sansation_Bold.woff2') format('woff');
 }
-/* @font-face {
+ @font-face {
+	font-family: 'ClearSans-Regular';
+	font-style: normal;
+	font-weight: 400;
+	src: local('ClearSans'), url('../fonts/ClearSans-Regular.woff') format('woff');
+}
+ @font-face {
 	font-family: 'ClearSans-Medium';
 	font-style: normal;
 	font-weight: 500;
 	src: local('ClearSans'), url('../fonts/ClearSans-Medium.woff') format('woff');
-}*/
+}
  @font-face {
+	font-family: 'ClearSans-Bold';
+	font-style: normal;
+	font-weight: 700;
+	src: local('ClearSans'), url('../fonts/ClearSans-Bold.woff') format('woff');
+}
+@font-face {
 	font-family: 'Sansation_Regular';
 	font-style: normal;
 	font-weight: 400;
@@ -29,12 +41,19 @@
 	--grey-c : #818696;
 	--pink-gradient: linear-gradient(115deg,#d71997,#b03d9b);
 }
+ h1{
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 1.6;
+	color: var(--purple-color);
+}
  h2{
 	font-size: 24px;
 	font-weight: 600;
 	line-height: 1.6;
 	color: var(--purple-color);
 }
+
  .otherdba_s h2{
 	text-align: center;
 	line-height: 1.6;
@@ -75,10 +94,11 @@
 	padding: 5px 10px;
 	position: relative;
 	border-radius:3px 3px 0 0;
+	font-family: 'ClearSans-Regular';
 }
  .nav-menu > li > a{
 	color: #485a83;
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: 600;
 }
  .nav-menu li:hover > a{
@@ -114,6 +134,7 @@
 }
  .sub_menu li a{
 	color: #fff;
+	font-size: 12px;
 	font-weight: 500;
 	padding: 5px 10px 5px 20px;
 	display: block;
@@ -152,6 +173,9 @@
 	font-weight: 600;
 	line-height: 1.4;
 	margin-bottom: 10px;
+	font-family: 'ClearSans-Medium';
+	font-size: 36px;
+
 }
  .banner_content h5{
 	color: var(--purple-color);
@@ -184,16 +208,16 @@
 }
 .partner_container,
 .solution_title_section,
-.dba_section, .otherdba_s,
+ .otherdba_s,
 .contact_map_section,
-.tabs-section,
 .process_container,
 .timeline_section,
 .footer_container,
 .about_section,
 .main_about_section,
 .term_container,
-.pa_content
+.pa_content,
+.toggle_taba
  {
 	max-width: 845px;
 	margin: 0 auto;
@@ -202,7 +226,12 @@
 	max-width: 600px;
 }
  .feature_container{
+	max-width: 1366px;
+ }
+ .dba_section,
+ .selftabe-content{
 	max-width: 1170px;
+	margin:0 auto;
  }
 /*.footer_container {
 	max-width: 845px;
@@ -221,6 +250,7 @@
 	color: #485a83;
 	font-weight: 600;
 	font-size: 15px;
+	font-family: 'ClearSans-Medium';
 }
  .feature-div p{
 	font-size: 13px;
@@ -281,6 +311,18 @@
 	color: var(--purple-color);
 	font-weight: 600;
 }
+.about_s_section{
+	background-color: #fbfbfb;
+    padding: 60px 0;
+    border-radius: 0 0 85% 85% / 30%;
+}
+.about_header,
+.process_header{
+	background-color: #fbfbfb;
+}
+.aboutpage_content{
+	padding-top: 0 !important;
+}
 .about_title .border_bar {
 	margin-left: 0;
 }
@@ -301,12 +343,13 @@
 }
 .main_about_section,
 .main_about_content{
-	padding: 50px 0 0 0 ;
+	padding: 30px 0 0 0 ;
 }
 .main_about_content p{
     line-height: 1.8;
     color: var(--grey-c);
-    font-size: 13px;
+    font-size: 12px;
+    font-family: 'ClearSans-Regular';
 }
 .main_about_content span{
     color:var(--red-color);
@@ -487,6 +530,12 @@
  .stitle_wrapper h3, .dba_title h3 {
 	color: var(--purple-color);
 	font-weight: 600;
+}
+.stitle_wrapper h2,
+.dba_title h2{
+	font-family: 'ClearSans-Medium';
+	font-size: 18px;
+	font-weight: 500;
 }
  .sp_figure img{
 	max-width: 146px;
@@ -787,7 +836,7 @@
 	margin-top: 10px;
 }
  .tab_m_content h3 {
-	font-size: 34px;
+	font-size: 25px;
 	font-weight: 600;
 	margin-bottom: 20px;
 }
@@ -796,38 +845,39 @@
 	max-width: 600px;
 	width:100%;
 	margin: 0 auto;
-	font-size: 18px;
+	font-size: 14px;
 	line-height:1.6;
 }
  .tab_m_content p{
 	color: var(--gray-color);
 }
  .mytab_btn li:not(:first-child){
-	padding-left: 8px;
+	padding-left: 9px;
 }
  .tabs-section{
 	padding: 50px 0;
 }
  .mytab_btn{
 	position: relative;
-	padding: 11px;
-	height: 50px;
+	padding: 3px 5px; 
 	overflow:hidden;
 	background-color: #fff;
 	border: 1px solid hsla(233,7%,75%,.7);
 	border-radius: 8px;
+	align-items: center;
 	box-shadow: 0 2px 24px 0 rgba(0,0,0,.06);
 }
  .mytab_btn li.active a{
 	background-image: linear-gradient(115deg,#464178,#243055);
 	border-radius: 6px;
 	color: #fff;
-	padding: 10px;
 }
  .mytab_btn li a{
 	font-size: 12px;
 	color: #121b3b;
 	font-weight: 600;
+	padding: 10px;
+	display: block;
 }
  .map_sec iframe{
 	overflow: hidden;
