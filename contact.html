@@ -58,15 +58,15 @@
                            <div class="contact_part contact_partss">
                                 <h3>Contact Us</h3>
                                 <div class="form_sec">
-                                    <form>
+                                    <form action="mail.php" method="post">
                                         <div class="twocol_form">
                                             <div class="form_controls">
                                                 <label>first name</label>
-                                                <input type="text" name="fname" placeholder="Your First Name">
+                                                <input type="text" name="fname" placeholder="Your First Name" required>
                                             </div>
                                             <div class="form_controls">
                                                 <label>last Name</label>
-                                                <input type="text" name="lname" placeholder="Your Last Name">
+                                                <input type="text" name="lname" placeholder="Your Last Name" required>
                                             </div>
                                         </div>
                                           <div class="form_controls">
@@ -79,10 +79,10 @@
                                             </div>
                                               <div class="form_controls">
                                                 <label>Message</label>
-                                              <textarea placeholder="How can we help you?"></textarea>
+                                              <textarea placeholder="How can we help you?" name="message"></textarea>
                                             </div>
                                             <div class="form_controls but_right">
-                                                 <button class="self_btn">Send Message</button>
+                                                 <button class="self_btn" type="submit" name="submit">Send Message</button>
                                             </div>
                                     </form>
                                 </div>
